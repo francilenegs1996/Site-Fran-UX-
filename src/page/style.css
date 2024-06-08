@@ -8,7 +8,7 @@
 	font-family: 'JetBrains Mono', monospace;
     font-optical-sizing: auto;
     font-style: normal;
-    font-weight: 300; 
+    font-weight: 200; 
 	flex-direction: column;
 	min-width: 100%;
     min-height: 100%;
@@ -44,9 +44,9 @@ header {
 
 
 .nav-links li a {
-    color: #ebd5e6;
+    color: #ffffff;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
     transition: 0.4s;
     padding-bottom: 10px;
 }
@@ -54,16 +54,16 @@ header {
 .nav-links li div {
     transition: 0.4s;
     height: 1px;
-    background-color: #ebd5e6;
-    width: 10%;
+    background-color: #E82E5D;
+    width: 1%;
 }
 
 .nav-links li:hover div {
     transition: 0.4s;
     width: 100%;
-    background-color: blueviolet;
+    background-color: #E82E5D;
 }
 
 .nav-links li:hover a {
-    color: blueviolet;
+    color: #E82E5D;
 }
