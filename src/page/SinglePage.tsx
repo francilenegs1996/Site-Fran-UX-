@@ -13,16 +13,20 @@ export default function SinglePage() {
             </div>
             <ul className="nav-links">
               <li>
-                <a href="#">HOME</a>
+                <a className="nav-button" href="#">HOME</a>
+                <div></div>
               </li>
               <li>
-                <a href="#">PORTFÓLIO</a>
+                <a className="nav-button" href="#">PORTFÓLIO</a>
+                <div></div>
               </li>
               <li>
-                <a href="#">SERVIÇOS</a>
+                <a className="nav-button" href="#">SERVIÇOS</a>
+                <div></div>
               </li>
               <li>
-                <a href="#">CONTATO</a>
+                <a className="nav-button" href="#">CONTATO</a>
+                <div></div>
               </li>
             </ul>
           </nav>
