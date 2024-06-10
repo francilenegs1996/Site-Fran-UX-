@@ -5,27 +5,18 @@
 }
 
 .conteudoTodo {
-	font-family: 'JetBrains Mono', monospace;
+    font-family: 'JetBrains Mono', monospace;
     font-optical-sizing: auto;
     font-style: normal;
     font-weight: 200; 
-	flex-direction: column;
-	min-width: 100%;
+    flex-direction: column;
+    min-width: 100%;
     min-height: 100%;
     flex: 1;
-	
 }
 
 
-header {
-    padding: 10px 11%;
-}
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
 .logofran {
     height: 100%;
@@ -35,35 +26,7 @@ header {
 }
 
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 90px;	
-}
 
 
 
-.nav-links li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 14px;
-    transition: 0.4s;
-    padding-bottom: 10px;
-}
 
-.nav-links li div {
-    transition: 0.4s;
-    height: 1px;
-    background-color: #E82E5D;
-    width: 1%;
-}
-
-.nav-links li:hover div {
-    transition: 0.4s;
-    width: 100%;
-    background-color: #E82E5D;
-}
-
-.nav-links li:hover a {
-    color: #E82E5D;
-}
