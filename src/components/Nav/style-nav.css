@@ -3,7 +3,6 @@ header {
     position: relative;
 }
 
-
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -16,12 +15,17 @@ header {
     gap: 90px;    
 }
 
+.nav-links li {
+    position: relative;
+}
+
 .nav-links li a {
     color: #ffffff;
     text-decoration: none;
     font-size: 14px;
     transition: 0.4s;
     padding-bottom: 10px;
+    display: inline-block;
 }
 
 .nav-links li div {
@@ -29,20 +33,22 @@ header {
     height: 1px;
     background-color: #E82E5D;
     width: 1%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
-
-.nav-links li#menuhamburguer div {
-    transition: 0.4s;
+.nav-links li:hover div,
+.nav-links li a:hover + div {
     width: 100%;
-    background-color: #E82E5D;
 }
 
-.nav-links li#menuhamburguer a {
+.nav-links li:hover a,
+.nav-links li a:hover {
     color: #E82E5D;
 }
 
-/* Estilos do menu hamburger */
+/* Estilos do menu hamburguer */
 #menuhamburguer {
     display: none; /* Escondido por padrão */
     position: absolute;
@@ -52,7 +58,6 @@ header {
     user-select: none;
     -webkit-user-select: none;
 }
-
 
 #menuhamburguer input {
     display: block;
@@ -64,10 +69,6 @@ header {
     cursor: pointer;
     opacity: 0;
     z-index: 3;
-}
-
-#menuhamburguer span {
-    background-color: #E82E5D;
 }
 
 #menuhamburguer span {
@@ -109,12 +110,7 @@ header {
     transform: rotate(-45deg) translate(0, -1px);
 }
 
-#menuhamburguer {
-    display: none;
-    
-}
-
-/* ajustes do padding e margin buttons burguer */
+/* Ajustes do padding e margin buttons hamburguer */
 #menu {
     position: absolute;
     width: 100vw;
@@ -136,7 +132,7 @@ header {
 
 #menu li {
     padding: 10px 0;
-    font-size: 20px ;
+    font-size: 20px;
 }
 
 #menu li a {
@@ -145,18 +141,17 @@ header {
     transition: 0.4s;
 }
 
-#menu li a#menuhamburguer {
+#menu li a:hover {
     color: #E82E5D;
-    transition-duration: .3s;
 }
 
 @media (max-width: 1000px) {
     .nav-links {
-        display: none;
+        display: none; /* Esconder links de navegação em telas menores */
     }
 
     #menuhamburguer {
-        display: block; /* Mostrar o menu hamburger */
+        display: block; /* Mostrar o menu hamburguer */
     }
 
     .logofran {

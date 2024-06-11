@@ -7,7 +7,7 @@ export default function Nav() {
       <nav className="navbar">
         <div className="logo">
           <a href="#">
-            <img className="logofran" src={logo} alt="Logo Fran UX"></img>
+            <img className="logofran" src={logo} alt="Logo Fran UX" />
           </a>
         </div>
         <ul className="nav-links">
