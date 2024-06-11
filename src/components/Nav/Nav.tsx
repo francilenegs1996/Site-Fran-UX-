@@ -36,7 +36,7 @@ export default function Nav() {
             <div></div>
           </li>
         </ul>
-        <div id="menuToggle">
+        <div id="menuhamburguer">
           <input type="checkbox" />
           <span></span>
           <span></span>

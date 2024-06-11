@@ -1,5 +1,6 @@
 header {
-    padding: 10px 11%;
+    padding: 10px;
+    position: relative;
 }
 
 
@@ -31,18 +32,18 @@ header {
 }
 
 
-.nav-links li:hover div {
+.nav-links li#menuhamburguer div {
     transition: 0.4s;
     width: 100%;
     background-color: #E82E5D;
 }
 
-.nav-links li:hover a {
+.nav-links li#menuhamburguer a {
     color: #E82E5D;
 }
 
 /* Estilos do menu hamburger */
-#menuToggle {
+#menuhamburguer {
     display: none; /* Escondido por padrão */
     position: absolute;
     top: 20px;
@@ -53,7 +54,7 @@ header {
 }
 
 
-#menuToggle input {
+#menuhamburguer input {
     display: block;
     width: 40px;
     height: 32px;
@@ -65,11 +66,11 @@ header {
     z-index: 3;
 }
 
-#menuToggle:hover span {
+#menuhamburguer span {
     background-color: #E82E5D;
 }
 
-#menuToggle span {
+#menuhamburguer span {
     display: block;
     width: 33px;
     height: 4px;
@@ -84,30 +85,34 @@ header {
                opacity 0.55s ease;
 }
 
-#menuToggle span:first-child {
+#menuhamburguer span:first-child {
     transform-origin: 0% 0%;
 }
 
-#menuToggle span:nth-last-child(2) {
+#menuhamburguer span:nth-last-child(2) {
     transform-origin: 0% 100%;
 }
 
-#menuToggle input:checked ~ span {
+#menuhamburguer input:checked ~ span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
     background: #232323;
 }
 
-#menuToggle input:checked ~ span:nth-last-child(3) {
+#menuhamburguer input:checked ~ span:nth-last-child(3) {
     opacity: 0;
     transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-#menuToggle input:checked ~ span:nth-last-child(2) {
+#menuhamburguer input:checked ~ span:nth-last-child(2) {
     opacity: 1;
     transform: rotate(-45deg) translate(0, -1px);
 }
 
+#menuhamburguer {
+    display: none;
+    
+}
 
 /* ajustes do padding e margin buttons burguer */
 #menu {
@@ -140,7 +145,7 @@ header {
     transition: 0.4s;
 }
 
-#menu li a:hover {
+#menu li a#menuhamburguer {
     color: #E82E5D;
     transition-duration: .3s;
 }
@@ -150,7 +155,7 @@ header {
         display: none;
     }
 
-    #menuToggle {
+    #menuhamburguer {
         display: block; /* Mostrar o menu hamburger */
     }
 
@@ -159,6 +164,6 @@ header {
     }
 }
 
-#menuToggle input:checked ~ ul {
+#menuhamburguer input:checked ~ ul {
     transform: none;
 }
