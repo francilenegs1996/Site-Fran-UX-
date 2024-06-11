@@ -1,20 +1,31 @@
 import imagemfran from "../../assets/imagemfran.svg"
 import './style-sectionmain.css'
 
-export default function Sectionmain() {
-    return (
-      <div className="container" style={{ width: 1000, height: 1000, backgroundColor: 'white' }}>
-        <section className="intro">
-          <div className="intro-text">
-            <p>Olá, seja bem-vindo!</p>
-            <h1>Eu sou <span className="highlight">Fran</span><br />UX/UI Designer</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquet porttitor lacus luctus accumsan tortor posuere.</p>
-            <a href="#portfolio" className="button">Entrar em contato</a>
-          </div>
-          <div className="intro-image">
-          <img className="imagemfran" src={imagemfran} alt="ImagemFran UX"></img>
-          </div>
-        </section>
-      </div>
-    );
-  }
+interface Coisasdapagina  {
+  img: string;
+  text?: string;
+  title?: string;
+  subTitulo?: string
+  name?: string;
+  buttonText?: string;
+  existButton?: boolean
+}
+
+
+export default function Sectionmain({...props}: Coisasdapagina) {
+  return (
+    <div className="container">
+      <section className="intro">
+        <div className="container-text">
+          <p>{props.title}</p>
+          <h1>Eu sou <span className="highlight">Fran</span><br />UX/UI Designer</h1>
+          <p>{props.text}</p>
+          {props.existButton && <a href="#portfolio" className="button">{props.buttonText}</a>}
+        </div>
+        <div className="container-img">
+          <img className="imagemfran" src={props.img} alt="ImagemFran UX"></img>
+        </div>
+      </section>
+    </div>
+  );
+}

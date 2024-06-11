@@ -1,36 +1,41 @@
+.container {
+    height: 100vh;
+}
+
 .intro {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background: #f2f2f2; /* Nova cor de fundo */
     height: 100%;
     box-sizing: border-box;
+    flex-wrap: wrap; /* Permitir que os itens se alinhem em várias linhas em telas menores */
 }
 
-.intro-text {
+.container-text {
     max-width: 100%;
     text-align: left;
     margin-bottom: 20px;
+    flex: 1 1 50%; /* Permitir que o texto ocupe até 50% do espaço disponível */
 }
 
-.intro-text p {
-    color: #000000; 
+.container-text p {
+    color: white;
     margin-bottom: 10px;
     font-size: 14px;
 }
 
-.intro-text h1 {
-    color: #000000; 
-    font-size: 24px; 
+.container-text h1 {
+    color: white;
+    font-size: 24px;
     margin-bottom: 10px;
 }
 
-.intro-text .highlight {
+.container-text .highlight {
     color: #E82E5D;
 }
 
-.intro-text .button {
+.container-text .button {
     display: inline-block;
     padding: 8px 16px;
     background: #E82E5D;
@@ -41,14 +46,43 @@
     font-size: 14px;
 }
 
-.intro-text .button:hover {
+.container-text .button:hover {
     background: #d0254b;
 }
 
-.intro-image img {
+.container-img {
+    flex: 1 30%; /* Permitir que a imagem ocupe o espaço disponível */
     display: flex;
-    max-width: 200%;
-    margin-left: 80%;
-   
+    justify-content: flex-end; /* Alinhar a imagem à direita */
+    align-items: flex-start; /* Alinhar a imagem ao topo */
+    position: relative; /* Necessário para ajustar a posição da imagem */
+    top: -50px; /* Ajuste conforme necessário para mover a imagem para cima */
     
+    
+}
+
+.imagemfran {
+    max-width: 100%; /* Garantir que a imagem não ultrapasse o tamanho do contêiner */
+    height: auto; /* Manter a proporção da imagem */
+    width: 80%;
+    object-fit: contain;
+    
+}
+
+/* Ajustes adicionais para telas menores */
+@media (max-width: 768px) {
+    .container-text, .container-img {
+        flex: 1 1 100%; /* Itens ocupam 100% do espaço em telas menores */
+        text-align: center; /* Centralizar o texto em telas menores */
+        margin-bottom: 20px; /* Adicionar margem inferior para telas menores */
+    }
+
+    .container-img {
+        top: 0; /* Remover o deslocamento superior em telas menores */
+        justify-content: center; /* Centralizar a imagem em telas menores */
+    }
+
+    .container-img img {
+        width: 80%; /* Ajustar a largura da imagem para telas menores */
+    }
 }
