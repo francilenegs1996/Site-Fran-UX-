@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import SinglePage from './page/SinglePage'
 import './style/index.css'
+import App from './app/App'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <SinglePage />
+    <App />
   </React.StrictMode>,
 )
