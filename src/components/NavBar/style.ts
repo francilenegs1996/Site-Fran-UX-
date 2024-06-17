@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { PropsContainer, PropsItem } from "./interfaces";
 
-const ContainerNavBar = styled.div<PropsContainer>`
+const NavBarComponent = styled.div`
 width: 10vw;
 height: 100%;
 background-color: #2421ff;
@@ -9,9 +8,15 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: space-around;
+
+@media (max-width: 720px) {
+	width: 100vw;
+	height: 10vh;
+	flex-direction: row;
+}
 `;
 
-const Item = styled.a<PropsItem>`
+const ItemComponent = styled.a`
   width: 8vw;
   height: 4vw;
   background-color: #000;
@@ -29,6 +34,7 @@ const Item = styled.a<PropsItem>`
    height: 6vw;
   }
 
+
 		&:active {
 			transition: 500ms;
 			background-color: red;
@@ -36,9 +42,4 @@ const Item = styled.a<PropsItem>`
 `;
 
 
-
-
-
-
-
-export { ContainerNavBar, Item }
+export { NavBarComponent, ItemComponent }

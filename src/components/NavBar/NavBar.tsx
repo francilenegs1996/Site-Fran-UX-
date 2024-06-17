@@ -1,21 +1,28 @@
-import { ContainerNavBar, Item } from './style'
+import Curriculo from '../../pages/Curriculo/Curriculo'
+import Home from '../../pages/Home/Home'
+import { NavBarComponent, ItemComponent } from './style'
 
-export default function NavBar() {
+interface Props {
+	setPage: (page: JSX.Element) => void;
+}
+
+export default function NavBar({setPage}: Props) {
 
 	const arrayItens = [
-		{ nome: 'Home', link: '/' },
-		{ nome: 'Sobre', link: '/sobre' },
-		{ nome: 'Contato', link: '/contato' },
-		{ nome: 'Login', link: '/login' },
-		{ nome: 'Login2', link: '/login2' },
-
+		{ nome: 'Home', link: '#', page: Home },
+		{ nome: 'Curriculo', link: '#', page: Curriculo },
 	]
 
 	return (
-		<ContainerNavBar>
-			{arrayItens.map(itemDoArray => {
-				return <Item href={itemDoArray.link}>{itemDoArray.nome}</Item>
-			})}
-		</ContainerNavBar>
+		<NavBarComponent>
+			{arrayItens.map(item => (
+				<ItemComponent
+					onClick={() => setPage(item.page)}
+					href={item.link}>
+					{item.nome}
+				</ItemComponent>
+			))}
+
+		</NavBarComponent>
 	)
 }
