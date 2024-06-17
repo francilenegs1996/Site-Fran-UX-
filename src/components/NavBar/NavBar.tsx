@@ -1,9 +1,10 @@
+import { Dispatch, SetStateAction } from 'react';
 import Curriculo from '../../pages/Curriculo/Curriculo'
 import Home from '../../pages/Home/Home'
 import { NavBarComponent, ItemComponent } from './style'
 
 interface Props {
-	setPage: (page: JSX.Element) => void;
+	setPage: (page: JSX.Element) => void | Dispatch<SetStateAction<JSX.Element>>;
 }
 
 export default function NavBar({setPage}: Props) {
@@ -17,7 +18,7 @@ export default function NavBar({setPage}: Props) {
 		<NavBarComponent>
 			{arrayItens.map(item => (
 				<ItemComponent
-					onClick={() => setPage(item.page)}
+					onClick={() => setPage(item.page())}
 					href={item.link}>
 					{item.nome}
 				</ItemComponent>
