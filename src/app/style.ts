@@ -9,7 +9,7 @@ flex-direction: row;
 background-color: '#030202';
 
 @media (max-width: 720px) {
-	flex-direction: column;
+	flex-direction: column-reverse;
 }
 
 `;
