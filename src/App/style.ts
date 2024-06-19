@@ -16,5 +16,3 @@ background-color: '#030202';
 }
 
 
-`;
-
