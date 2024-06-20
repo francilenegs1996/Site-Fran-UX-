@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
 
+interface PropsSection {
+  alignRight: boolean
+}
+
 export const Divdoselementos = styled.div`
   width: 100vw;
   height: 100vh;
@@ -8,14 +12,16 @@ export const Divdoselementos = styled.div`
   justify-content: flex-end;
   align-items: center;
   flex-direction: row;
+  position: absolute;
+  z-index: -3;
 `;
 
 
-export const Section = styled.div<{ alignRight: boolean }>`
+export const Section = styled.div<PropsSection>`
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: ${(props) => (props.alignRight ? 'flex-end' : 'flex-start')};
+  justify-content: ${({alignRight}) => (alignRight ? 'flex-end' : 'flex-start')};
   align-items: center;
 `;
 
