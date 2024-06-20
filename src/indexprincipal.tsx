@@ -19,11 +19,17 @@ const Principal = () => {
 	const [scroll, setScroll] = useState(30)
 	
 	useEffect(() => {
-		window.addEventListener('scroll', () => {
-			const scrollTop = document.documentElement.scrollTop;			
-			setScroll(Math.round(scrollTop + 30))
-});
-	}, [])
+		const handleScroll = () => {
+						const scrollTop = document.documentElement.scrollTop;
+						setScroll(Math.round(scrollTop + 30));
+		};
+
+		window.addEventListener('scroll', handleScroll);
+
+		return () => {
+						window.removeEventListener('scroll', handleScroll);
+		};
+}, []);
 
 	return (
 		<ElementPai>
