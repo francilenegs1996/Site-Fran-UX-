@@ -18,6 +18,7 @@ export const ContainerPages = styled.div`
   /* justify-content: flex-end; */
   align-items: center;
   justify-content: center;
+  gap: 20px;
 `;
 
 
